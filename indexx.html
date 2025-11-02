@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Stay Hotel</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <span class="logo">LuxuryStay</span>
+  <span class="menu-btn" onclick="document.querySelector('nav ul').classList.toggle('show')">☰</span>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#rooms">Rooms</a></li>
+    <li><a href="#booking">Booking</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <h1>Welcome to Luxury Stay</h1>
+  <p>Experience comfort & elegance like never before</p>
+</header>
+
+<section id="rooms">
+  <h2 style="text-align:center;margin-bottom:20px;">Our Rooms</h2>
+  <div class="rooms">
+    <div class="room-card"><img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg"><div><h3>Deluxe Room</h3><p>Premium comfort with beautiful views.</p></div></div>
+    <div class="room-card"><img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg"><div><h3>Premium Suite</h3><p>Luxury suite for the perfect stay.</p></div></div>
+    <div class="room-card"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"><div><h3>Family Room</h3><p>Spacious and ideal for families.</p></div></div>
+  </div>
+</section>
+
+<section id="booking">
+  <h2 style="text-align:center;margin-bottom:20px;">Book Your Stay</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="date" required>
+    <select><option>Deluxe Room</option><option>Premium Suite</option><option>Family Room</option></select>
+    <button type="submit">Book Now</button>
+  </form>
+</section>
+
+<section id="services">
+  <h2 style="text-align:center;margin-bottom:20px;">Our Services</h2>
+  <ul style="max-width:600px;margin:auto;line-height:1.9;font-size:1.1rem;">
+    <li>24/7 Room Service</li>
+    <li>Free High-Speed WiFi</li>
+    <li>Swimming Pool & Spa</li>
+    <li>Complimentary Breakfast</li>
+    <li>Luxury Gym</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2 style="text-align:center;margin-bottom:20px;">Contact Us</h2>
+  <p style="text-align:center;">Email: info@luxurystay.com | Phone: +91 98765 43210</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Luxury Stay Hotel | All Rights Reserved</p>
+</footer>
+
+<script>
+  // Smooth scroll
+  document.querySelectorAll('nav a').forEach(link => {
+    link.onclick = e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    };
+  });
+</script>
+</body>
+</html>

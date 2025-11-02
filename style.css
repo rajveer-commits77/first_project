@@ -1,0 +1,61 @@
+ *{
+      margin:0;
+       padding:0;
+        box-sizing:border-box; 
+        font-family:Arial;
+    }
+    body{line-height:1.6;}
+
+    /* Navbar */
+    nav{
+      position:fixed;top:0;left:0;width:100%;background:#000a;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;z-index:1000;
+    }
+    nav .logo{color:#fff;font-size:1.6rem;font-weight:bold;}
+    nav ul{display:flex;gap:20px;list-style:none;}
+    nav a{color:#fff;text-decoration:none;font-weight:bold;font-size:1rem;transition:0.2s;}
+    nav a:hover{color:#f3c14f;}
+
+    /* Mobile menu button */
+    .menu-btn{display:none;font-size:28px;color:white;cursor:pointer;}
+    @media(max-width:768px){
+      nav ul{position:absolute;top:60px;left:0;width:100%;background:#000d;flex-direction:column;text-align:center;display:none;padding:10px 0;}
+      nav ul.show{display:block;}
+      .menu-btn{display:block;}
+    }
+
+    /* Header Section */
+    header{
+      background:url('https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg') center/cover no-repeat;height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;color:white;text-align:center;padding:20px;animation:fadeIn 2s;
+    }
+    header h1{font-size:3rem;margin-bottom:10px;}
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+    /* Rooms */
+    section{padding:60px 20px;max-width:1200px;margin:auto;}
+    .rooms{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+    .room-card{
+      border:1px solid #ddd;border-radius:10px;overflow:hidden;width:300px;box-shadow:0 2px 8px rgba(0,0,0,0.1);transition:.3s;
+    }
+    .room-card:hover{transform:translateY(-5px);box-shadow:0 4px 15px rgba(0,0,0,0.2);} 
+    .room-card img{width:100%;height:200px;object-fit:cover;}
+
+    /* Booking Form */
+    form{max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;}
+    input, select, button{
+      padding:12px;border:1px solid #ccc;border-radius:6px;font-size:1rem;
+    }
+    button{background:#f3c14f;cursor:pointer;font-weight:bold;transition:.3s;}
+    button:hover{background:#dbaa39;}
+
+    /* Footer */
+    footer{
+        text-align:center;
+        padding:20px;
+        background:#222;
+        color:white;
+    }
+
+    @media(max-width:768px)
+    {header h1
+        {font-size:2rem;}
+    }
